@@ -86,7 +86,6 @@ sqlparse==0.4.2
 systemd-python==234
 toml==0.10.2
 typing-extensions==3.10.0.2
-ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.26.3
 usb-creator==0.3.3
