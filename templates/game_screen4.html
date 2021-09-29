@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gamescreen.css') }}">
+</head>
+
+
+<body class="bg-nav">
+
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/">Beer Game</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"> -->
+              <div style="display: flex;">
+                <a class="nav-link mt-15 display-7 active" aria-current="page" href="/"><span>Home</span></a>  
+                <a class="nav-link mt-15 display-7 active" aria-current="page" href="/choose_roles"><span>Roles</span></a>
+                <a class="nav-link mt-15 display-7" style="float: right;" href="/student_logout"><span>Logout</span></a>
+                 </div>    
+              <!-- </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/choose_roles">Roles</a>
+              </li>
+            
+          </ul>
+        </ul>
+        <div>
+          <a class="nav-link" href="/student_logout">Logout</a>
+        </div>
+        </div>
+      </div>
+    </nav> -->
+    <center>
+    <div class="divris col-5 mt-100">
+        <h3>Inventory and Order Status Plot </h3>
+        <pre>     <button class="ibtn">Demand Plot</button>      <button class="ibtn">Order Plot</button></pre>
+        <br><br>
+        <h3>Supply Chain Setting:</h3>
+        <p>Holding Cost: <b>{{games['holding_cost']}}</b><br>
+          Backorder Cost: <b>{{games['backlog_cost']}}</b><br>
+          Downstream Player : <span style="color: red;">Retailer</span><br>
+          Upstream Player : <span style="color: green;">Distributor</span><br>
+          Shipping Delay : <span style="color: red;"><b>2 weeks</b></span>(Distributor- >Wholeseller, Wholeseller-
+          >Retailer)
+          <br>
+          Information Delay : <span style="color: green;"><b>{{games['info_delay']}}</b></span>(Retailer- >Wholeseller, Wholeseller-
+          >Distributor)
+        </p>
+      </div>
+    </center>
+      </body>
+      </html>

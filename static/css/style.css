@@ -1,0 +1,225 @@
+body{
+	background-image: url("https://flevix.com/wp-content/uploads/2019/12/Live-Background-1.svg");
+}
+
+.c-container {
+	width: calc(100% - 40px);
+	margin: 120px auto;
+	max-width: 1500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: rgb(179, 221, 223);
+}
+
+.c-options {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+}
+
+.display-7 {
+	font-size: 2rem;
+	font-weight: 600;
+	max-width: 1200px;
+}
+
+
+.c-btn-group {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+}
+
+.c-btn-group .btn {
+	margin-right: 25px;
+	padding: 10px 50px;
+	font-size: 1.2rem;
+
+}
+
+.center {
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-body {
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.rules {
+	font-size: 1.2rem;
+}
+
+.mt-15 {
+	margin-top: 15px;
+}
+
+.mt-25 {
+	margin-top: 25px;
+}
+
+.mt-50 {
+	margin-top: 50px;
+}
+
+.mt-100 {
+	margin-top: 100px;
+}
+
+.mt-14 {
+	margin-top: 14%;
+}
+
+.c-table-container {
+	width: calc(100% - 40px);
+	background-color: rgb(179, 221, 223);
+	padding: 20px;
+	box-sizing: border-box;
+	margin: auto;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.c-table-student {
+	max-width: 1200px;
+}
+
+.c-top-container {
+	width: calc(90% - 40px);
+	margin: 40px auto;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.c-bot-container {
+	width: calc(90% - 40px);
+	margin: 40px auto;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.c-top-btn-group > * {
+	margin-left: 15px;
+}
+
+.c-bot-btn-group > * {
+	margin: 0 8px;
+}
+
+.btn-light {
+	border: 1px solid whitesmoke;
+	background-color: whitesmoke;
+}
+
+.table{
+	background-color: #c2dff8;
+}
+
+td {
+	vertical-align: middle !important;
+}
+
+th {
+	vertical-align: middle;
+}
+
+.th-num {
+	text-align: left;
+	border-top-left-radius: 10px; 
+	border-bottom-left-radius: 10px;
+	font-weight: normal;
+}
+
+td:last-child {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px; 
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.home{
+	font-size: 25px;
+	margin-top: 30px !important;
+
+}
+
+.container-fluid p{
+	margin-top: 14%;
+	font-size: 60px;
+	font-weight: 700;
+	color: rgb(59, 66, 66);
+}
+
+.list-group-item{
+	background-color: #c2dff8 !important;
+	border-radius: 50px !important;
+	margin-top: 15px !important;
+}
+.list-group-item:hover{
+	background-color: #d8edfd !important;
+}
+
+.nav-link span{
+	color: white;
+	border: 1px solid white;
+	border-radius: 50px;
+	padding: 15px;
+}
+
+.nav-link span:hover{
+	background-color: white;
+	color: rgb(59, 66, 66);
+}
+
+.head-text{
+	font-size: 40px;
+	font-weight: 700;
+	color: rgb(59, 66, 66);
+}
+
+.font-60{
+	font-size: 60px;
+	font-weight: 700;
+}
+
+form label{
+	font-size: 25px;
+	color: rgb(59, 66, 66);
+	float: left;
+}
+
+form input{
+	padding: 25px;
+}
+
+.ibtn{
+    border: 1px solid #c2dff8;
+	border-radius: 40px;
+    background: #c2dff8;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 5px;
+    color: black;
+	text-decoration: none;
+}
+
+.ibtn:hover{
+	background-color: #c2dff8a8;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+
+<body class="bg-nav ">
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"> -->
+                    <div style="display: flex;">
+                      <a class="nav-link mt-15 display-7 active" aria-current="page" href="/"><span>Home</span></a>  
+                      <a class="nav-link mt-15 display-7" aria-current="page" href="/instructor"><span>Instructor Page</span></a>
+                      <a class="nav-link mt-15 display-7" style="float: right;" href="/instructor_logout"><span>Logout</span></a>
+                      </div>
+                  <!-- </li>
+              </li>
+            </ul>
+            <div>
+              <a class="nav-link" href="/instructor_logout">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav> -->
+      
+    <div class="container-fluid mt-14">
+        <br><br>
+
+       <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Game Number</th>
+      <th scope="col">Time Display between supply chain partners</th>
+      <th scope="col">Is Wholesaler Present?</th>
+      <th scope="col">Is Retailer Present?</th>
+      <th scope="col">Current Cost of the System</th>
+      <th scope="col">Demand Pattern</th>
+      <th scope="col">Holding Cost</th>
+      <th scope="col">Backorder Cost</th>
+      <th scope="col">Number of weeks completed</th>
+      <th scope="col">Reset the Game?</th>
+      <th scope="col">Stop/ Continue this game</th>
+      <th scope="col">Week to stop</th>
+      <th scope="col">Delete Game</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for game in games %}
+    <tr>
+      <td>{{game['id']}}</td>
+      <td>
+          <select name="weeks" id="weeks">
+              <option value="two">2 weeks</option>
+              <option value="three">3 weeks</option>
+              <option value="four">4 weeks</option>
+              <option value="one">1 week</option>
+            </select>
+      </td>
+      <td>
+          <select name="opt" id="opt">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+      </td>
+      <td>
+          <select name="opt" id="opt">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+      </td>
+        <td> 48 </td>
+        <td>
+          <div class="input-group">
+            <select class="form-select" id="inputGroupSelect01">
+              {% if game['demand_pattern'] %}
+              <option selected>{{game['demand_pattern']}}</option>
+              {% endif %}
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <div class="input-group">
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" value="{{game['holding_cost']}}" readonly>
+          </div>
+        </td>
+        <td>
+          <div class="input-group">
+            <input type="text" class="form-control" aria-label="Sizing example input" placeholder="1"
+              aria-describedby="inputGroup-sizing-default" value="{{game['backlog_cost']}}" readonly>
+          </div>
+        </td>
+        <td>
+          {{game['rounds_complete']}}
+        </td>
+        <td>
+           <a href="/reset_game/{{game['id']}}" class="btn btn-light">Reset</a>
+        </td>
+        <td>
+            <input type="button" value="Freeze">
+        </td>
+        <td>
+          <div class="input-group">
+            <input type="text" class="form-control" aria-label="Sizing example input" placeholder="1"
+              aria-describedby="inputGroup-sizing-default" readonly>
+          </div>
+        </td>
+        <td>
+          <a href="/delete_game/{{game['id']}}" class="btn btn-secondary">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+    </div>
+<div class="fixed-bottom center">
+  <div class="btn-container">
+      <input class="ibtn" type="button" value="Update">
+        <input class="ibtn" type="button" value="Reset all Games">
+        <input class="ibtn" type="button" value="Freeze/Pause all Games">
+        <input class="ibtn" type="button" value="Print all Passwords">
+        <input class="ibtn" type="button" value="Change the number of games">
+        <input class="ibtn" type="button" value="To Just Monitor">
+        <input class="ibtn" type="button" value="Info Sharing">
+        <input class="ibtn" type="button" value="Update Custom Demand">
+  </div>
+
+  <div class="btn-container">
+        <input class="ibtn" type="button" value="Update Initial settings">
+        <input class="ibtn" type="button" value="Plot of Demand 1">
+        <input class="ibtn" type="button" value="Plot of Demand 2">
+        <input class="ibtn" type="button" value="Plot of Custom Demand (3)">
+  </div>
+</div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

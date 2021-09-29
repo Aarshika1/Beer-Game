@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>models module &#8212; Beer Distribution Game Sprint 4 Team 19  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test_main module" href="test_main.html" />
+    <link rel="prev" title="main module" href="main.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-models">
+<span id="models-module"></span><h1>models module<a class="headerlink" href="#module-models" title="Permalink to this headline">¶</a></h1>
+<p>Defines database models for our game’s classes in Flask</p>
+<dl class="py class">
+<dt id="models.DemandPattern">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">models.</span></code><code class="sig-name descname"><span class="pre">DemandPattern</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.DemandPattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Model</span></code></p>
+<p>Class for a Beer Game demand pattern</p>
+<dl class="py attribute">
+<dt id="models.DemandPattern.game">
+<code class="sig-name descname"><span class="pre">game</span></code><a class="headerlink" href="#models.DemandPattern.game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.DemandPattern.game_id">
+<code class="sig-name descname"><span class="pre">game_id</span></code><a class="headerlink" href="#models.DemandPattern.game_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.DemandPattern.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#models.DemandPattern.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.DemandPattern.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#models.DemandPattern.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.DemandPattern.weeks">
+<code class="sig-name descname"><span class="pre">weeks</span></code><a class="headerlink" href="#models.DemandPattern.weeks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="models.Game">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">models.</span></code><code class="sig-name descname"><span class="pre">Game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.Game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Model</span></code></p>
+<p>Class for a Beer Game individual game</p>
+<dl class="py attribute">
+<dt id="models.Game.active">
+<code class="sig-name descname"><span class="pre">active</span></code><a class="headerlink" href="#models.Game.active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.backlog_cost">
+<code class="sig-name descname"><span class="pre">backlog_cost</span></code><a class="headerlink" href="#models.Game.backlog_cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.demand_id">
+<code class="sig-name descname"><span class="pre">demand_id</span></code><a class="headerlink" href="#models.Game.demand_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.demand_pattern">
+<code class="sig-name descname"><span class="pre">demand_pattern</span></code><a class="headerlink" href="#models.Game.demand_pattern" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.distributor_present">
+<code class="sig-name descname"><span class="pre">distributor_present</span></code><a class="headerlink" href="#models.Game.distributor_present" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.game_demand">
+<code class="sig-name descname"><span class="pre">game_demand</span></code><a class="headerlink" href="#models.Game.game_demand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.game_instructor">
+<code class="sig-name descname"><span class="pre">game_instructor</span></code><a class="headerlink" href="#models.Game.game_instructor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.holding_cost">
+<code class="sig-name descname"><span class="pre">holding_cost</span></code><a class="headerlink" href="#models.Game.holding_cost" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#models.Game.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.info_delay">
+<code class="sig-name descname"><span class="pre">info_delay</span></code><a class="headerlink" href="#models.Game.info_delay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.info_sharing">
+<code class="sig-name descname"><span class="pre">info_sharing</span></code><a class="headerlink" href="#models.Game.info_sharing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.instructor">
+<code class="sig-name descname"><span class="pre">instructor</span></code><a class="headerlink" href="#models.Game.instructor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.instructor_id">
+<code class="sig-name descname"><span class="pre">instructor_id</span></code><a class="headerlink" href="#models.Game.instructor_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.is_default_game">
+<code class="sig-name descname"><span class="pre">is_default_game</span></code><a class="headerlink" href="#models.Game.is_default_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.rounds_complete">
+<code class="sig-name descname"><span class="pre">rounds_complete</span></code><a class="headerlink" href="#models.Game.rounds_complete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.session_id">
+<code class="sig-name descname"><span class="pre">session_id</span></code><a class="headerlink" href="#models.Game.session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.session_length">
+<code class="sig-name descname"><span class="pre">session_length</span></code><a class="headerlink" href="#models.Game.session_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.starting_inventory">
+<code class="sig-name descname"><span class="pre">starting_inventory</span></code><a class="headerlink" href="#models.Game.starting_inventory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Game.wholesaler_present">
+<code class="sig-name descname"><span class="pre">wholesaler_present</span></code><a class="headerlink" href="#models.Game.wholesaler_present" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="models.Instructor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">models.</span></code><code class="sig-name descname"><span class="pre">Instructor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.Instructor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Model</span></code></p>
+<p>Class for a Beer Game instructor</p>
+<dl class="py attribute">
+<dt id="models.Instructor.Instructor">
+<code class="sig-name descname"><span class="pre">Instructor</span></code><a class="headerlink" href="#models.Instructor.Instructor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Instructor.default_game">
+<code class="sig-name descname"><span class="pre">default_game</span></code><a class="headerlink" href="#models.Instructor.default_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Instructor.email">
+<code class="sig-name descname"><span class="pre">email</span></code><a class="headerlink" href="#models.Instructor.email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Instructor.game">
+<code class="sig-name descname"><span class="pre">game</span></code><a class="headerlink" href="#models.Instructor.game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Instructor.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#models.Instructor.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Instructor.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#models.Instructor.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Instructor.password">
+<code class="sig-name descname"><span class="pre">password</span></code><a class="headerlink" href="#models.Instructor.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="models.Student">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">models.</span></code><code class="sig-name descname"><span class="pre">Student</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#models.Student" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Model</span></code></p>
+<p>Class for a Beer Game instructor</p>
+<dl class="py attribute">
+<dt id="models.Student.email">
+<code class="sig-name descname"><span class="pre">email</span></code><a class="headerlink" href="#models.Student.email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Student.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#models.Student.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Student.password">
+<code class="sig-name descname"><span class="pre">password</span></code><a class="headerlink" href="#models.Student.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="models.Student.username">
+<code class="sig-name descname"><span class="pre">username</span></code><a class="headerlink" href="#models.Student.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Beer Distribution Game Sprint 4 Team 19</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">se-04-team-19</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_main.html">test_main module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">se-04-team-19</a><ul>
+      <li>Previous: <a href="main.html" title="previous chapter">main module</a></li>
+      <li>Next: <a href="test_main.html" title="next chapter">test_main module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Aarshika Singh, Alba Lokaj.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/models.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

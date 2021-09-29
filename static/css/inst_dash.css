@@ -1,0 +1,57 @@
+body{
+	background-image: url("https://flevix.com/wp-content/uploads/2019/12/Live-Background-1.svg");
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.content-table thead tr {
+  background-color: cadetblue;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 5px 5px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr{
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 1px solid cadetblue;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: black;
+}
+
+.btn-container{
+    text-align:center;
+    margin-top: 20px;
+}
+
+.ibtn{
+    border:1px solid cadetblue;
+    background:#fff;
+    padding:7px 14px;
+    font-size: 12px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 5px;
+    color: black;
+}
+
+.ibtn:hover{
+    background:cadetblue ;
+    color: #ffffff;
+}
