@@ -60,7 +60,6 @@ PyNaCl==1.1.2
 pyparsing==2.4.7
 pyRFC3339==1.0
 pytest==6.2.2
-python-apt==1.6.5+ubuntu0.5
 python-dateutil==2.6.1
 python-debian==0.1.32
 pytz==2021.1
