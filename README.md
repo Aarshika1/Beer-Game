@@ -1,5 +1,4 @@
-# Sprint 4 Team 19
-Aarshika Singh, Alba Lokaj
+Aarshika Singh
 
 ## Introduction
 
